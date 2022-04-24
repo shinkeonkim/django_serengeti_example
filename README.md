@@ -28,7 +28,7 @@
   - Article 생성/수정 Form 클래스 (ArticleForm)를 만들어봅니다.
   - Article 상세 View 와 Template (/articles/:id)를 만들어봅니다.
   - Article 생성 View 와 Template (/articles/new)을 만들어봅니다.
-  - Article 수정 View 와 Template (/articles/:id/new)을 만들어봅니다.
+  - Article 수정 View 와 Template (/articles/:id/edit)을 만들어봅니다.
   - Article 삭제 View (/articles/:id/destory)를 만들어봅니다.
   - Article 목록을 루트 페이지에서 나타나도록 해봅시다.
 - github에 올리기
