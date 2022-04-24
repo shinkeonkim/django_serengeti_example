@@ -10,5 +10,21 @@
   세렝게티 커뮤니티
 
   <hr>
+
+  {% if user.is_authenticated %}
+    <!-- 유저가 로그인되어있는가? -->
+    <a href="{% url 'user:signout' %}">
+      로그아웃
+    </a>
+  {% else %}
+    <!-- 유저가 로그인하지 않았는가? -->
+    <a href="{% url 'user:signup' %}">
+      회원가입
+    </a>
+
+    <a href="{% url 'user:signin' %}">
+      로그인
+    </a>
+  {% endif %}
 </body>
 </html>
