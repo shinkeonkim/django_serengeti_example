@@ -45,3 +45,11 @@ def show(request, id):
     article = get_object_or_404(Article, pk=id)
     return render(request, 'show.html', { 'article': article })
 
+
+def destroy(request, id):
+    # 과연 내가 작성한 글만 삭제할 수 있는 걸까요?
+    article = get_object_or_404(Article, pk=id)
+    
+    article.delete()
+
+    return redirect('main:index')
