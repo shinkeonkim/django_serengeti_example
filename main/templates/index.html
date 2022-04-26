@@ -16,6 +16,8 @@
     <a href="{% url 'user:signout' %}">
       로그아웃
     </a>
+
+    <a href="{% url 'article:new' %}" > 글 작성 </a>
   {% else %}
     <!-- 유저가 로그인하지 않았는가? -->
     <a href="{% url 'user:signup' %}">
@@ -26,5 +28,29 @@
       로그인
     </a>
   {% endif %}
+  
+  <hr>
+  {% for article in articles %}
+    <div style="border: 1px solid black; margin: 2rem; padding: 1rem;">
+      {% if user.is_authenticated %}
+          <a href="{% url 'article:edit' id=article.id %}">
+            글 수정
+          </a>
+
+          <a href="{% url 'article:destroy' id=article.id %}">
+            글 삭제
+          </a>
+      {% endif %}
+
+      <hr>
+
+      ID: {{ article.id }} <br>
+      제목: {{ article.title }}  <br>
+      내용: {{ article.content }} <br>
+      작성자 이름: {{ article.author.username }} <br>
+      작성 일자 {{ article.created_at }} <br>
+      수정 일자 {{ article.updated_at }} <br>
+    </div>
+  {% endfor %}
 </body>
 </html>
