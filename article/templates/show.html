@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>게시물 조회</title>
+</head>
+<body>
+  ID: {{ article.id }} <br>
+  제목: {{ article.title }}  <br>
+  내용: {{ article.content }} <br>
+  작성자 이름: {{ article.author.username }} <br>
+  작성 일자 {{ article.created_at }} <br>
+  수정 일자 {{ article.updated_at }} <br>
+</body>
+</html>
