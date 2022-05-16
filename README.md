@@ -14,6 +14,10 @@
 - git init 
 - .gitignore, README.md 등의 파일을 만들어봅니다. → [관련 커밋 보기](https://github.com/shinkeonkim/django_serengeti_example/commit/c38d892be73f866d4b8e44273d32f6b8186f66f5)
 - requirements.txt 파일을 만들어봅니다. → [관련 커밋 보기](https://github.com/shinkeonkim/django_serengeti_example/commit/1db3f607f89bf6eed5c92163d7705ee72daa3b7b)
+
+- **주의사항**
+  - python manage.py makemigrations 와 python manage.py migrate는 user 모델을 작성한 이후에 진행해야합니다.
+  - Django 기본 user 모델 마이그레이션이 돌지 않도록 하기 위함입니다.
 - main app을 생성합니다. → [관련 커밋 보기](https://github.com/shinkeonkim/django_serengeti_example/commit/f9b443874842447a0cad00a96894830d75721859)
   - root(/) 페이지를 임시로 만들어봅니다. → [관련 커밋 보기](https://github.com/shinkeonkim/django_serengeti_example/commit/0d911eaa325a5b77c87646049e3304ce5cc5f90d)
 - user app을 생성합니다. → [관련 커밋 보기](https://github.com/shinkeonkim/django_serengeti_example/commit/bf2b8e3750ab7ff821df83a0176ab4ae43399a00)
